@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>邮件简历</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+		<link rel="stylesheet" type="text/css" href="icomoon/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			function getRem() {
+				var dw = 750,
+					winW = document.documentElement.clientWidth,
+					raito = winW / dw;
+				document.documentElement.style.fontSize = raito * 100 + "px";
+			}
+			getRem();
+			window.addEventListener("resize", getRem, false);
+		</script>
+	</head>
+
+	<body>
+		<!--进度条加载部分loading-->
+		<section id="loading" class="loading">
+			<div class="ufo">
+				<img src="img/ufoGif.png" />
+				<div class="aura"></div>
+			</div>
+
+			<div class="title">
+				<h1>您有一封邮件正在路上</h1>
+			</div>
+			<div class="progress">
+				<div class="progressBox">
+					<img src="img/ufo.png" />
+					<span class="icon email"></span>
+				</div>
+			</div>
+		</section>
+		<!--页面显示邮件部分email-->
+		<section class="phoneEmail" id="phoneEmail">
+			<audio id="dingMusic" src="img/ding.mp3" preload="none"></audio>
+			<div class="emailTime"></div>
+			<div class="emailWeek"></div>
+			<!--<img class="emailBar" src="img/email-Bar.jpg" />-->
+			<img class="emailMessage" src="img/email-Message.png" />
+			<div class="touch"></div>
+		</section>
+		<!--个人简历介绍部分information-->
+		<section class="information" id="information">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide page1" id="page1">
+						<div class="introduceDate"></div>
+						<div class="blogDate"></div>
+						<div class="skillDate"></div>
+						<div class="projectDate"></div>
+						<!--page1 个人信息的介绍-->
+						<div class="me"></div>
+						<div class="introduce">
+							个人介绍
+						</div>
+						<div class="blog">博客</div>
+						<div class="skill">
+							技能
+						</div>
+						<div class="project">
+							项目信息
+						</div>
+					</div>
+					<div class="swiper-slide page2">
+						<!--page2 教学与工作-->
+						<div class="teach">
+							<h2>教育背景</h2>
+							<div class="teachTime1"></div>
+							<div class="teachInfo1">
+								<div class="teachSchool">哈尔滨理工大学</div>
+								<div class="teachContent">
+									电子科学与技术专业，在校期间担当班长职务，带领同学获得“优秀班级称号”。
+								</div>
+							</div>
+							<div class="teachTime2"></div>
+							<div class="teachInfo2">
+								<div class="teachSchool">台湾中华大学</div>
+								<div class="teachContent">
+									电子工程专业，大三期间在台交流，自主创作手机遥控避障机器小车，获台湾中华大学创新设计三等奖。
+								</div>
+							</div>
+						</div>
+						<div class="work">
+							<h2>工作经历</h2>
+							<div class="workTime"></div>
+							<div class="workInfo">
+								<div class="workFirm">百度手机助手--活动运营</div>
+								<div class="workContent">
+									1. 作为一名活动策划者，能够拥有良好的创意思想，落地活动原型Demo<br>
+									2. 积极与产品、开发与设计通力合作，有大型活动部门合作经验，评估项目预计时间，有良好的时间感<br>
+									3. 逻辑严谨，在与前端讨论活动流程中受益匪浅，并逐渐对前端有深入了解<br>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide page3">
+						<!--再次邮箱-->
+						<h2><span>各位大大</span><span>快收我到碗里来</span></h2>
+						<div class="commend">
+							了解更多
+							<span class="icon">um_brella@126.com</span>
+							<span class="icon">13604512790</span>
+						</div>
+						<div class="item">
+							传送门
+							<span>个人博客地址<a href="http://qiminghaonan.com/" class="icon"> http://qiminghaonan.com/</a></span>
+							<span>打地鼠游戏地址<a href="https://github.com/um-brella/Hit-hamster" class="icon"> https://github.com/um-brella/Hit-hamster</a></span>
+							<span>遮罩层JQ插件地址<a href="https://github.com/um-brella/covering-plug-in-for-JQ" class="icon"> https://github.com/um-brella/covering-plug-in-for-JQ</a></span>
+						</div>
+					</div>
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+				<!--向下切换按钮-->
+				<div class="swiper-button-next swiper-button-white"></div>
+			</div>
+		</section>
+	</body>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

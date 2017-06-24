@@ -1,0 +1,782 @@
+html {
+	font-size: 100px;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	-webkit-user-select: none;
+	position: relative;
+	z-index: -3;
+	perspective: 1200px;
+}
+
+.loading,
+.phoneEmail,
+.information {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+/*loading*/
+
+.loading {
+	/*display: block;*/
+	background: url(../img/loadingBg.jpg) bottom right;
+	background-size: 100% 100%;
+	animation: bgMove 5s linear infinite both;
+	-webkit-animation: bgMove 5s linear infinite both;
+	transition: all 5s linear;
+	-webkit-transition: all 5s linear;
+	transform-style: preserve-3d
+}
+
+.loading .ufo {
+	width: 2rem;
+	height: 1.5rem;
+	position: absolute;
+	top: .3rem;
+	right: 0;
+	animation: ufoMove 3s linear both;
+	-webkit-animation: ufoMove 3s linear both;
+	transition: all 3s linear;
+	-webkit-transition: all 3s linear;
+}
+
+.loading .ufo img {
+	width: 100%;
+	display: block;
+	position: absolute;
+	z-index: 9;
+}
+
+.loading .ufo .aura {
+	position: absolute;
+	left: 50%;
+	margin-left: -.7rem;
+	z-index: 5;
+	border: 2px solid ghostwhite;
+	width: 50%;
+	height: 8%;
+	border-radius: 50% 50%;
+	animation: auraMove 1.2s .4s linear 2 alternate both;
+	-webkit-animation: auraMove 1.2s .4s linear 2 alternate both;
+	transition: all 1.2s linear;
+	-webkit-transition: all 1.2s linear;
+	box-shadow: 0 .2rem 3px 5px #DD524D, 0 0 3px 3px ghostwhite, 0 -.2rem 3px 3px ghostwhite inset, 0 .4rem 3px 8px lightseagreen;
+}
+
+.loading .title {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	margin-top: -2.2rem;
+	height: 1.4rem;
+	color: white;
+	text-align: center;
+	letter-spacing: .04rem;
+}
+
+.loading .title h1 {
+	font-size: .5rem;
+	margin-bottom: .2rem;
+	height: .75rem;
+	line-height: .75rem;
+}
+
+.loading .progress {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: .85rem 0 0 -2.3rem;
+	width: 4.6rem;
+	height: .3rem;
+	background: white;
+	border-radius: .06rem;
+}
+
+.loading .progressBox img,
+.loading .progressBox .email {
+	display: block;
+	position: absolute;
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);
+	transition: all 1s linear;
+	-webkit-transition: all 1s linear;
+}
+
+.loading .progressBox img {
+	width: 1.5rem;
+	top: -.32rem;
+	left: -.4rem;
+}
+
+.loading .progressBox .email {
+	z-index: 10;
+	width: .7rem;
+	height: .7rem;
+	font-size: .3rem;
+	text-align: center;
+	line-height: 1rem;
+	left: 0.1rem;
+	top: -.365rem;
+}
+
+.loading .progressBox .email:before {
+	content: "\e945";
+	color: rgba(255, 255, 255, .8);
+	text-shadow: 0 0 2px 2px rgba(255, 255, 255, .5);
+	animation: emailBiling .3s ease-in-out infinite;
+	-webkit-animation: emailBiling .3s ease-in-out infinite;
+}
+
+.loading .progressBox {
+	position: relative;
+	width: 0%;
+	height: 100%;
+	border-radius: .06rem;
+	background: linear-gradient(45deg, #5cb85c 25%, #74c274 25%, #74c274 50%, #5cb85c 50%, #5cb85c 75%, #74c274 75%);
+	background: -webkit-linear-gradient(45deg, #5cb85c 25%, #74c274 25%, #74c274 50%, #5cb85c 50%, #5cb85c 75%, #74c274 75%);
+	background-size: .3rem .3rem;
+	animation: loadingMove 1s linear infinite both;
+	-webkit-animation: loadingMove 1s linear infinite both;
+	transition: all 1s linear;
+	-webkit-transition: all 1s linear;
+}
+
+
+/*email页面*/
+
+.phoneEmail {
+	background: url(../img/email-Bg.jpg) no-repeat;
+	background-size: cover;
+	z-index: 2;
+	/*-webkit-transition: all .8s;
+	transition: all .8s;*/
+}
+
+.phoneEmail .emailTime {
+	font-size: 1.7rem;
+	color: white;
+	position: absolute;
+	top: 11%;
+	left: 50%;
+}
+
+.phoneEmail .emailWeek {
+	font-size: .39rem;
+	color: white;
+	position: absolute;
+	top: 26%;
+	left: 50%;
+}
+
+.phoneEmail .emailBar {
+	display: block;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+.phoneEmail .emailMessage {
+	display: block;
+	width: 94%;
+	position: absolute;
+	left: 3%;
+	top: 37%;
+	border-radius: .2rem;
+}
+
+.phoneEmail .touch {
+	width: .6rem;
+	height: .6rem;
+	border: .08rem solid white;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 10;
+	top: 47%;
+	left: 24.5%;
+	animation: pulse .8s ease-in-out infinite;
+	-webkit-animation: pulse .8s ease-in-out infinite;
+	-webkit-transition: all .8s;
+	transition: all .8s;
+}
+
+
+/*information*/
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.swiper-wrapper,
+.swiper-slide {
+	width: 100%;
+	height: 100%;
+	transition-timing-function: ease-in-out
+}
+
+.swiper-slide {
+	background: url(../img/information-Bg.jpg) no-repeat center;
+	background-size: auto 100%;
+}
+
+.swiper-button-next {
+	color: white;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	position: fixed;
+	top: 12rem;
+	left: 50%;
+	-webkit-animation: bounce .8s linear infinite;
+	animation: bounce .8s linear infinite;
+}
+
+
+/*page1*/
+
+.swiper-wrapper .page1 .me {
+	position: absolute;
+	z-index: 9;
+	width: 2.6rem;
+	height: 2.6rem;
+	border-radius: 50%;
+	left: 50%;
+	top: 50%;
+	margin-top: -1.3rem;
+	margin-left: -1.3rem;
+	background: url(../img/information-page1-me.jpg) no-repeat center;
+	background-size: auto 100%;
+	background-position-x: -.5rem;
+	-webkit-perspective: 1.2rem;
+	-webkit-perspective-origin: 50% 50%;
+	box-shadow: 0 0 2px #99cccc;
+}
+
+.swiper-wrapper .page1 .introduce,
+.swiper-wrapper .page1 .blog,
+.swiper-wrapper .page1 .skill,
+.swiper-wrapper .page1 .project {
+	display: inline-block;
+	-webkit-perspective: 1.2rem;
+	-webkit-perspective-origin: 50% 50%;
+	border-radius: 50%;
+	position: absolute;
+	text-align: center;
+	font-family: "微软雅黑";
+	color: rgba(0, 0, 0, .7);
+	left: 50%;
+	top: 50%;
+}
+
+.swiper-wrapper .page1 .introduce {
+	width: 1.8rem;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	background: -webkit-radial-gradient(50% 120%, circle cover, #336699, #99ccff 80%, #99cccc 100%);
+	box-shadow: 0 0 2px #99cccc;
+	margin-top: -.9rem;
+	margin-left: -.9rem;
+	-webkit-animation: action-introduce 40s linear infinite;
+	animation: action-introduce 40s linear infinite;
+}
+
+.swiper-wrapper .page1 .blog {
+	width: 1.1rem;
+	height: 1.1rem;
+	line-height: 1.1rem;
+	background: -webkit-radial-gradient(50% 120%, circle cover, #009966, #99cccc 80%, #99cc99 100%);
+	box-shadow: 0 0 2px #99cc99;
+	margin-top: -.55rem;
+	margin-left: -.55rem;
+	font-size: .29rem;
+	-webkit-animation: action-blog 40s linear infinite;
+	animation: action-blog 40s linear infinite;
+}
+
+.swiper-wrapper .page1 .skill {
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	background: -webkit-radial-gradient(50% 120%, circle cover, #993333, #ff6666 80%, #cc3333 100%);
+	box-shadow: 0 0 2px #cc3333;
+	margin-top: -.75rem;
+	margin-left: -.75rem;
+	-webkit-animation: action-skill 40s linear infinite;
+	animation: action-skill 40s linear infinite;
+}
+
+.swiper-wrapper .page1 .project {
+	width: 1.3rem;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	background: -webkit-radial-gradient(50% 120%, circle cover, #cc9933, #ffcc33 80%, #cccc33 100%);
+	box-shadow: 0 0 2px #cc9933;
+	margin-top: -.65rem;
+	margin-left: -.65rem;
+	font-size: .24rem;
+	-webkit-animation: action-project 40s linear infinite;
+	animation: action-project 40s linear infinite;
+}
+
+.swiper-wrapper .page1 .introduce:before,
+.swiper-wrapper .page1 .blog:before,
+.swiper-wrapper .page1 .skill:before,
+.swiper-wrapper .page1 .project:before {
+	content: "";
+	position: absolute;
+	background: -webkit-radial-gradient(50% 120%, circle cover, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+	border-radius: 50%;
+	bottom: 2.5%;
+	left: 5%;
+	opacity: 0.6;
+	height: 100%;
+	width: 90%;
+	-webkit-filter: blur(.05rem);
+	z-index: 2;
+}
+
+.swiper-wrapper .page1 .introduce:after,
+.swiper-wrapper .page1 .blog:after,
+.swiper-wrapper .page1 .skill:after,
+.swiper-wrapper .page1 .project:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: 50%;
+	background: -webkit-radial-gradient(50% 50%, circle cover, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+	-webkit-transform: translateX(-.8rem) translateY(-.9rem) skewX(-20deg);
+	-webkit-filter: blur(.1rem);
+}
+
+.swiper-wrapper .page1 .introduce:after {
+	top: 25%;
+	left: 23%;
+}
+
+.swiper-wrapper .page1 .blog:after {
+	top: 59%;
+	left: 51%;
+}
+
+.swiper-wrapper .page1 .skill:after {
+	top: 38%;
+	left: 34%;
+}
+
+.swiper-wrapper .page1 .project:after {
+	top: 45%;
+	left: 43%;
+}
+
+.page1 .introduceDataRemove,
+.page1 .blogDataRemove,
+.page1 .skillDataRemove,
+.page1 .projectDataRemove {
+	width: 70%;
+	height: 70%;
+	color: white;
+	background-color: rgba(0, 0, 0, .85);
+	position: absolute;
+	left: 15%;
+	top: 15%;
+	z-index: 99;
+	font-size: .3rem;
+	padding: .2rem;
+	-webkit-animation: zoomIn 1s both;
+	animation: zoomIn 1s both;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+
+.page1 .return {
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	z-index: 999;
+	right: 0;
+	top: 0;
+}
+
+.page1 .return:before {
+	content: "\ea0d";
+	color: white;
+	text-align: center;
+	font-size: .7rem;
+	line-height: 1rem;
+	margin-left: .2rem;
+}
+
+.page1 .introduceDataRemove .road {
+	margin-top: .2rem;
+}
+
+.page1 .introduceDataRemove .road span {
+	width: .7rem;
+	line-height: .7rem;
+	font-size: .25rem;
+}
+
+.page1 .blogDataRemove .blogintroduce span {
+	width: .7rem;
+	line-height: .7rem;
+	font-size: .25rem;
+}
+
+.page1 .blogDataRemove .blogintroduce span li {
+	margin-top: .2rem;
+}
+
+.page1 .blogDataRemove .blogHere {
+	margin-top: .3rem;
+	font-size: .25rem;
+}
+
+.page1 .blogDataRemove .blogHere a {
+	font-size: .32rem;
+	color: #99CCCC;
+}
+
+.page1 .introduceDataRemove .name i,
+.page1 .introduceDataRemove .tel i,
+.page1 .introduceDataRemove .email i,
+.page1 .introduceDataRemove .age i,
+.page1 .introduceDataRemove .sex i,
+.page1 .introduceDataRemove .wantto i,
+.page1 .introduceDataRemove .road i,
+.page1 .blogDataRemove .blogintroduce i,
+.page1 .projectDataRemove i {
+	font-family: KaiTi, "MicrosoftJhengHei", sans-serif;
+	font-size: .4rem;
+	margin-right: .3rem;
+	font-style: normal;
+}
+
+.page1 .skillDataRemove .html,
+.page1 .skillDataRemove .css,
+.page1 .skillDataRemove .javascript,
+.page1 .skillDataRemove .jQuery {
+	width: 2.3rem;
+	height: 2.3rem;
+	position: absolute;
+}
+
+.page1 .skillDataRemove .html {
+	left: .3rem;
+	top: .6rem;
+}
+
+.page1 .skillDataRemove .css {
+	right: .3rem;
+	top: .6rem;
+}
+
+.page1 .skillDataRemove .javascript {
+	top: 4rem;
+	left: .3rem;
+}
+
+.page1 .skillDataRemove .jQuery {
+	top: 4rem;
+	right: .3rem;
+}
+
+.page1 .skillDataRemove .per {
+	display: block;
+	font-size: .8rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.page1 .skillDataRemove .type {
+	display: block;
+	font-size: .55rem;
+	position: absolute;
+	left: 50%;
+	top: 110%;
+}
+
+.page1 .skillDataRemove .html .type {
+	color: #99CCCC;
+}
+
+.page1 .skillDataRemove .css .type {
+	color: #99CC99;
+}
+
+.page1 .skillDataRemove .javascript .type {
+	color: #ccccff;
+}
+
+.page1 .skillDataRemove .jQuery .type {
+	color: #ffcccc;
+}
+
+.page1 .skillDataRemove .wrapper {
+	width: 1.15rem;
+	height: 2.3rem;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+}
+
+.page1 .skillDataRemove .right {
+	right: 0;
+}
+
+.page1 .skillDataRemove .left {
+	left: 0;
+}
+
+.page1 .skillDataRemove .circleProgress {
+	width: 1.8rem;
+	height: 1.8rem;
+	border: .2rem solid transparent;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.page1 .skillDataRemove .rightcircle {
+	border-top: .2rem solid #99CCCC;
+	border-right: .2rem solid #99CCCC;
+	right: 0;
+}
+
+.page1 .skillDataRemove .leftcircle {
+	border-bottom: .2rem solid #99CCCC;
+	border-left: .2rem solid #99CCCC;
+	left: 0;
+	-webkit-transform: rotate(21deg);
+	transform: rotate(21deg);
+}
+
+.page1 .skillDataRemove .css .rightcircle {
+	border-top: .2rem solid #99CC99;
+	border-right: .2rem solid #99CC99;
+}
+
+.page1 .skillDataRemove .css .leftcircle {
+	border-bottom: .2rem solid #99CC99;
+	border-left: .2rem solid #99CC99;
+	-webkit-transform: rotate(-9deg);
+	transform: rotate(-9deg);
+}
+
+.page1 .skillDataRemove .javascript .rightcircle {
+	border-top: .2rem solid #ccccff;
+	border-right: .2rem solid #ccccff;
+}
+
+.page1 .skillDataRemove .javascript .leftcircle {
+	border-bottom: .2rem solid #ccccff;
+	border-left: .2rem solid #ccccff;
+	-webkit-transform: rotate(-9deg);
+	transform: rotate(-9deg);
+}
+
+.page1 .skillDataRemove .jQuery .rightcircle {
+	border-top: .2rem solid #ffcccc;
+	border-right: .2rem solid #ffcccc;
+}
+
+.page1 .skillDataRemove .jQuery .leftcircle {
+	border-bottom: .2rem solid #ffcccc;
+	border-left: .2rem solid #ffcccc;
+	-webkit-transform: rotate(-28deg);
+	transform: rotate(-28deg);
+}
+
+.page1 .projectDataRemove .hitGame {
+	margin-bottom: .3rem;
+}
+
+.page1 .projectDataRemove h2 {
+	text-align: center;
+	font-size: .45rem;
+}
+
+.page1 .projectDataRemove li,
+.page1 .projectDataRemove span {
+	font-size: .25rem;
+}
+
+.page1 .projectDataRemove a {
+	margin-top: .3rem;
+	font-size: .32rem;
+	color: #99CCCC;
+}
+
+
+/*page2*/
+
+.swiper-wrapper .page2 {
+	position: relative;
+	z-index: 9;
+	color: white;
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+}
+
+.swiper-wrapper .page2 .teach,
+.swiper-wrapper .page2 .work {
+	width: 100%;
+	margin-top: .4rem;
+}
+
+.swiper-wrapper .page2 h2 {
+	position: absolute;
+	text-align: center;
+	font-size: .55rem;
+}
+.swiper-wrapper .page2 .teach h2{
+	top: .3rem;
+	left: 50%;
+}
+.swiper-wrapper .page2 .work h2{
+	top: 5.7rem;
+	left: 50%;
+}
+.swiper-wrapper .page2 .teachTime1,.swiper-wrapper .page2 .teachTime2{
+	position: absolute;
+	width: 1.35rem;
+	height: 1.35rem;
+	border-radius: 50%;
+	opacity: .8;
+	background-color: white;
+	left: .3rem;
+	top: 1.2rem;
+	/*-webkit-animation: bounceInRight 1s both;
+	animation: bounceInRight 1s both;*/
+}
+.swiper-wrapper .page2 .teachTime2 {
+	top: 3.4rem;
+}
+.swiper-wrapper .page2 .workTime{
+	position: absolute;
+	width: 1.35rem;
+	height: 1.35rem;
+	border-radius: 50%;
+	opacity: .8;
+	background-color: white;
+	top: 6.7rem;
+	right: .3rem;
+}
+.swiper-wrapper .page2 .teachTime1:before,.swiper-wrapper .page2 .teachTime2:before,.swiper-wrapper .page2 .workTime:before {
+	content: "2012.9-2016.7";
+	word-wrap: break-word;
+	word-break: normal;
+	text-align: center;
+	color: #000000;
+	font-size: .3rem;
+	padding-top: .5rem;
+	position: absolute;
+	top: -.25rem;
+}
+.swiper-wrapper .page2 .teachTime2:before{
+	content: "2014.9-2015.7";
+}
+.swiper-wrapper .page2 .workTime:before{
+	content: "2016.6-2017.3";
+}
+.swiper-wrapper .page2 .teachInfo1,.swiper-wrapper .page2 .teachInfo2 {
+	position: absolute;
+	width: 70%;
+	left: 2rem;
+	top: 1.2rem
+}
+.swiper-wrapper .page2 .teachInfo2 {
+	top: 3.4rem
+}
+.swiper-wrapper .page2 .workInfo {
+	position: absolute;
+	left: .7rem;
+	top: 6.7rem;
+	width: 67%;
+}
+/*page3*/
+.swiper-wrapper .page3 {
+	position: relative;
+	z-index: 9;
+	color: white;
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+}
+.swiper-wrapper .page3 h2 span,.swiper-wrapper .page3 .commend span{
+	display: block;
+}
+.swiper-wrapper .page3 h2{
+	position: absolute;
+	font-size: .8rem;
+	width: 100%;
+	top: 18%;
+	text-align: center;
+}
+.swiper-wrapper .page3 .commend{
+	position: absolute;
+	font-size: .5rem;
+	width: 100%;
+	top: 39%;
+	text-align: center;
+}
+.swiper-wrapper .page3 .commend span{
+	margin-bottom: .2rem;
+	font-size: .4rem;
+}
+.swiper-wrapper .page3 .commend span:nth-child(1):before,.swiper-wrapper .page3 .commend span:nth-child(2):before{
+	content: "\ea86";
+	margin-right: .1rem;
+	font-size: .4rem;
+	margin-top: .05rem;
+}
+.swiper-wrapper .page3 .commend span:nth-child(2):before{
+	content: "\e942";
+}
+.swiper-wrapper .page3 .item{
+	position: absolute;
+	font-size: .5rem;
+	width: 85%;
+	top: 58%;
+	text-align: center;
+	left: 50%;
+}
+.swiper-wrapper .page3 .item span{
+	display: block;
+	font-size: .3rem;
+	text-align: left;
+	margin-bottom: .1rem;
+	font-family: Verdana, Geneva, sans-serif;background: #3e464d;
+}
+.swiper-wrapper .page3 .item span a{
+	color: #99CC99;
+}
+.swiper-wrapper .page3 .item span:nth-child(1) a:before{
+	color: #FAFAFA;
+	content: "\e971";
+}
+.swiper-wrapper .page3 .item span:nth-child(2) a:before{
+	color: #FAFAFA;
+	content: "\eab0";
+}
+.swiper-wrapper .page3 .item span:nth-child(3) a:before{
+	color: #FAFAFA;
+	content: "\eab0";
+}
