@@ -141,10 +141,10 @@ var informationRender = (function() {
 			$(".page3 .item").css("-webkit-animation","");
 		}else if(example.activeIndex === 1) {
 			$swiperBtn.css("display", "block");
-			$(".page2 .teachTime1").css("-webkit-animation","bounceInRight 2s .8 both");
-			$(".page2 .teachInfo1").css("-webkit-animation","bounceInRight 2s .8 both");
-			$(".page2 .teachTime2").css("-webkit-animation","bounceInRight 2s 1.6s both");
-			$(".page2 .teachInfo2").css("-webkit-animation","bounceInRight 2s 1.6s both");
+			$(".page2 .teachTime1").css("-webkit-animation","bounceInRight 2s .9 both");
+			$(".page2 .teachInfo1").css("-webkit-animation","bounceInRight 2s .9 both");
+			$(".page2 .teachTime2").css("-webkit-animation","bounceInRight 2s 1.4s both");
+			$(".page2 .teachInfo2").css("-webkit-animation","bounceInRight 2s 1.4s both");
 			$(".page2 .workTime").css("-webkit-animation","bounceInLeft 2s 3.9s both");
 			$(".page2 .workInfo").css("-webkit-animation","bounceInLeft 2s 3.9s both");
 			$(".page2 .teach h2").css("-webkit-animation","zoomIn 1s  both");
@@ -176,7 +176,7 @@ var informationRender = (function() {
 					<li>2. 此博客利用gothub来搭建,进行了响应式设计,适配移动端,同时相册利用原生JS进行了延迟加载设置,提高响应速度.</li>
 				</ol>
 			</span></div>
-			<div class="blogHere">可在最后一页进行查看</div>
+			<div class="blogHere">点击<a href="http://qiminghaonan.com/">这里</a>进行查看</div>
 			<div class="icon return blogReturn"></div>
 			</div>
 			`;
@@ -236,7 +236,7 @@ var informationRender = (function() {
 						2. 每打中一只地鼠加5分，实时同步总分数及命中率.
 					</li>
 				</ul>
-				<span>项目已上传到GitHub,可在最后一页进行查看.</span>
+				<span>项目已上传到GitHub,可在<a href="https://github.com/um-brella/Hit-hamster">这里</a>进行查看.</span>
 			</div>
 			<div class="covering">
 				<h2>遮罩层JQ插件</h2>
@@ -252,7 +252,7 @@ var informationRender = (function() {
 						3. 可设置遮罩层的背景颜色,添加文字等属性,同样支持回调函数及后续的文本更改与遮罩层隐藏移除.
 					</li>
 				</ul>
-				<span>项目已上传到GitHub,可在最后一页进行查看.</span>
+				<span>项目已上传到GitHub,可在<a href="https://github.com/um-brella/covering-plug-in-for-JQ">这里</a>进行查看.</span>
 			</div>
 			<div class="icon return projectReturn"></div>
 			</div>
